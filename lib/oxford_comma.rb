@@ -1,11 +1,12 @@
 def oxford_comma(array)
-new_array = []
 if array.size == 1
   array.join(" ,")
 elsif array.size == 2
   array.join(" and")
-else new_array << array.last
-  array.join(" ,") + " and" + new_array.join
+else 
+  ox_commas = array.map { |e| "#{e}, " } 
+  ox_commas << "and #{last}"
+  return ox_commas.join
 end
 
 end
