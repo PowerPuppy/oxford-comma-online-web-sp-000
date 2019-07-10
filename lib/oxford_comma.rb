@@ -5,6 +5,7 @@ if array.size == 1
 elsif array.size == 2
   array.join(" and")
 else new_array << array.last
+  array.join(" ,") + " and" + new_array.join 
 end
 
 end
